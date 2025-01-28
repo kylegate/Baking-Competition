@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+   {% with messages = get_flashed_messages() %}
+         {% if messages %}
+            <ul>
+               {% for message in messages %}
+               <li>{{ message }}</li>
+               {% endfor %}
+            </ul>
+         {% endif %}
+    {% endwith %}
+
+{% if session['logged_in'] and session['Security_Level'] >= 1%}
+
+      <form action="/delete-message"  method="POST">
+
+         <h3>Send Message to Delete a Baking Contest Entry</h3>
+
+          Entry ID<br>
+          <input type="text" name="Entry_ID"> <br>
+
+         <input type="submit" value="submit"><br>
+      </form>
+
+{% else %}
+    <h2>Page not found</h2>
+{% endif %}
+
+</body>
+</html>
+

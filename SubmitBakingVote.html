@@ -1,0 +1,41 @@
+   <!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+</head>
+<body>
+   {% with messages = get_flashed_messages() %}
+         {% if messages %}
+            <ul>
+               {% for message in messages %}
+               <li>{{ message }}</li>
+               {% endfor %}
+            </ul>
+         {% endif %}
+    {% endwith %}
+
+{% if session['logged_in'] and session['Security_Level'] >= 2%}
+
+      <form action="/Baking-Contest-Vote"  method="POST">
+
+         <h3>Baking Contest Entry Vote</h3>
+
+         Number of Excellent Votes<br>
+         <input type="text" name="Excellent_Votes" >  <br>
+
+         Number of Ok Votes<br>
+         <input type="text" name="Ok_Votes" >  <br>
+
+         Number of Bad Votes<br>
+         <input type="text" name="Bad_Votes" >  <br>
+
+          Entry ID<br>
+          <input type="text" name="Entry_ID"> <br>
+
+         <input type="submit" value="submit"><br>
+      </form>
+
+{% else %}
+    <h2>Page not found</h2>
+{% endif %}
+
+</body></html>
