@@ -23,5 +23,22 @@ To run the project locally, you'll need:
 ## Setup Instructions
 
 1. Clone this repository:
-   ```bash
    git clone https://github.com/username/Baking-Competition.git
+2. Navigate into the project directory:
+   cd baking-contest-web-app
+3. Set up a virtual environment:
+   python -m venv venv
+4. Activate the virtual environment:
+   Windows:
+      venv\Scripts\activate
+   macOS/Linux:
+      source venv/bin/activate
+5. Install the dependencies:
+   pip install -r requirements.txt
+6. Initialize the SQLite database:
+   python init_db.py
+7. Run the Flask application:
+   python run.py
+8. Run the socket server:
+   python socket_server.py
+9. Open your browser and go to http://127.0.0.1:5000 to access the application.
