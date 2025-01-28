@@ -33,12 +33,8 @@ To run the project locally, you'll need:
       venv\Scripts\activate
    macOS/Linux:
       source venv/bin/activate
-5. Install the dependencies:
+5. Install the required dependencies:
    pip install -r requirements.txt
-6. Initialize the SQLite database:
-   python init_db.py
-7. Run the Flask application:
-   python run.py
-8. Run the socket server:
-   python socket_server.py
-9. Open your browser and go to http://127.0.0.1:5000 to access the application.
+6. Run the Application:
+   python main.py
+10. Open your browser and go to http://127.0.0.1:5000 to access the application.
