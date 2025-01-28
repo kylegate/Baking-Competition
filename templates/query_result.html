@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+</head>
+<body data-gr-c-s-loaded="true" style="margin: 0px;">
+{% if session['logged_in'] %}
+    <h1>Query Results</h1>
+
+    {% if msg %}
+        <h3>{{ msg }}</h3>
+    {% endif %}
+
+    {% if errors %}
+        <h3>Errors:</h3>
+        <ul>
+            {% for error in errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+  <a href="/">Go back to home page</a>
+
+{% else %}
+    <h2>Page not found</h2>
+{% endif %}
+</body></html>
